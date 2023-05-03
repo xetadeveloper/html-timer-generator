@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width"
+        />
+        <link
+            rel="stylesheet"
+            href="./styles.css"
+        />
+        <script
+            type="module"
+            src="./script.js"
+        ></script>
+    </head>
+    <body>
+        <main>
+            <div>
+                <h1>Email Timer Generator</h1>
+                <h3>How to use</h3>
+                <ul>
+                    <li>
+                        The <em><strong>Date start type</strong></em> asks if you want to
+                        use the current date or you want to provide a specific start date
+                    </li>
+                    <li>
+                        The <em><strong>Time run type</strong></em> asks if you want to
+                        run the timer to a set date or if you want to run the timer for
+                        some specified time (days, hours, minutes, seconds).
+                    </li>
+                </ul>
+
+                <p>
+                    When you choose your settings, click on the
+                    <em><strong>Generate code</strong></em> button to generate the timer
+                    code, which you can copy to your clipboard and use anywhere.
+                </p>
+
+                <p>
+                    <strong>NOTE:</strong> This generates full HTML code (HTML + CSS +
+                    JS), so any changes needed to be made to the template can be made in
+                    the styles section of the HTML, but leave the script untouched for the
+                    functionality to work properly
+                </p>
+            </div>
+
+            <form id="form-container">
+                <div id="input-form">
+                    <label>
+                        <h5>Date start type</h5>
+                        <select id="date-start-type">
+                            <option
+                                value="now"
+                                selected
+                            >
+                                Current date
+                            </option>
+                            <option value="provided">Provided date</option>
+                        </select>
+                    </label>
+
+                    <label
+                        id="provided-date-label"
+                        class="hide-item"
+                    >
+                        <h5>Provided date</h5>
+                        <input
+                            id="provided-date"
+                            type="date"
+                        />
+                    </label>
+                </div>
+
+                <div id="input-form">
+                    <label>
+                        <h5>Time run type</h5>
+                        <select id="run-to-type">
+                            <option
+                                value="date"
+                                selected
+                            >
+                                Date
+                            </option>
+                            <option value="time">Time</option>
+                        </select>
+                    </label>
+
+                    <label id="date-count-label">
+                        <h5>Date to count to</h5>
+                        <input
+                            required
+                            id="date-end-selected"
+                            type="date"
+                        />
+                    </label>
+
+                    <label
+                        class="hide-item"
+                        id="time-count-label"
+                    >
+                        <h5>Time to count to</h5>
+                        <div class="time-holder">
+                            <div class="time-item">
+                                <h5>Days</h5>
+                                <input
+                                    id="days"
+                                    type="number"
+                                />
+                            </div>
+                            <div class="time-item">
+                                <h5>Hours</h5>
+                                <input
+                                    id="hours"
+                                    type="number"
+                                    max="24"
+                                />
+                            </div>
+                            <div class="time-item">
+                                <h5>Minutes</h5>
+                                <input
+                                    id="minutes"
+                                    type="number"
+                                    max="60"
+                                />
+                            </div>
+                            <div class="time-item">
+                                <h5>Seconds</h5>
+                                <input
+                                    id="seconds"
+                                    type="number"
+                                    max="60"
+                                />
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </form>
+
+            <div id="btn-holder">
+                <button
+                    type="submit"
+                    form="form-container"
+                    id="generate-button"
+                    style="
+                        background-color: #2783f5;
+                        color: white;
+                        border: 1px solid #278ed5;
+                    "
+                >
+                    Generate code
+                </button>
+                <button id="copy-button">Copy to clipboard</button>
+            </div>
+
+            <div>
+                <h3>Generated code</h3>
+                <pre id="generated-code"></pre>
+            </div>
+        </main>
+    </body>
+</html>

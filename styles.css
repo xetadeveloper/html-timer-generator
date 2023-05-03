@@ -1,0 +1,107 @@
+* {
+    font-family: system-ui !important;
+}
+
+main,
+label,
+#form-container,
+#btn-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+label {
+    display: flex;
+}
+
+main {
+    width: 100%;
+    gap: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+pre,
+select,
+input {
+    border-radius: 5px;
+}
+
+pre {
+    border: 1px solid black;
+    min-height: 200px;
+    overflow: auto;
+    padding: 0 10px;
+    max-height: 600px;
+}
+
+select,
+input {
+    min-width: 100px;
+    padding: 5px;
+    border: 1px solid grey;
+    height: 35px;
+}
+
+label {
+    gap: 10px;
+}
+
+label > h5 {
+    margin: 0;
+}
+
+button {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+ul > li:first-child {
+    margin-bottom: 20px;
+}
+
+#form-container {
+    gap: 20px;
+}
+
+#input-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#btn-holder {
+    gap: 15px;
+}
+
+.time-holder {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.time-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+}
+
+.time-item > h5 {
+    margin: 0;
+}
+
+.time-item > input {
+    width: 60px;
+    min-width: 0;
+}
+
+.hide-item {
+    display: none;
+}
+
+.show-item {
+    display: flex;
+}
