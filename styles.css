@@ -39,7 +39,6 @@ pre {
 select,
 input {
     min-width: 100px;
-    padding: 5px;
     border: 1px solid grey;
     height: 35px;
 }
