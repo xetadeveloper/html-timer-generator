@@ -10,5 +10,7 @@ A small application that generates html for timers, which you can embed in your 
 2. Click "Generate code"
 3. Copy generated code and use anywhere!😁👌 
 
+## Styling
+To change the styling of the timer, you'll have to edit the css style tag in the head, but not the HTML specifically so that the script still has access to the elements that it needs. 
 
 
