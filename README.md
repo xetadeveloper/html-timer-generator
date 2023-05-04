@@ -1,4 +1,4 @@
-# html-timer-generator
+# HTML Timer/Countdown Generator
 A small application that generates html for timers, which you can embed in your code.
 
 ### Notes
